@@ -1,0 +1,29 @@
+<!--
+  Generated template for the FindingPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>finding</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="finding">
+<ion-list><ion-item>{{Status}}</ion-item></ion-list>
+<div>
+  <h3 class="name-wrap">Name:<br><span class="name">{{driverName}}</span></h3>
+
+   <h3 class="time-wrap">Estimated Time:<br><span class="time">5 mintues</span></h3>
+
+   <ionic-ratings ratingsobj='ratingsObject' index='0'></ionic-ratings>
+
+   <ionic-ratings ratingsobj='ratingsObject' index='$index'></ionic-ratings>
+
+    <h2 class="rating-wrap">Ratings: <span class="rating"><span style="color: green;padding-right: 3px;">{{driverRating}}</span>/<span style="font-size: 3rem;padding-left: 3px;">5</span></span></h2>
+</div>
+</ion-content>

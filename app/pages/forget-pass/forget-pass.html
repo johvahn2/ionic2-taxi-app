@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>forgetPass</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+ <div [hidden]="sent"> 
+<input type="text" name="email" placeholder="Enter Email" [(ngModel)]="Email">
+<button (click)="send()">Send Code</button>
+ </div>
+
+ <div [hidden]="!sent">
+<input type="text" name="code" placeholder="Enter Code" [(ngModel)]="Code">
+<input type="text" name="password" placeholder="Enter New Password" [(ngModel)]="newPass">
+<input type="text" name="repassword" placeholder="ReEnter Password" [(ngModel)]="newPassRepeat">
+<button (click)="changePass()">Reset Password</button>
+ </div>
+</ion-content>
