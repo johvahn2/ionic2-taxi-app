@@ -22,7 +22,7 @@ export class RegisterPage {
 
   constructor(public navCtrl: NavController,public utils:Utils,public auth: Auth,public auther:Auther ,public user: User,private formBuilder2: FormBuilder) {
    
-    this.RegisterForm = this.formBuilder2.group({Firstname: ['', Validators.required],Lastname: ['', Validators.required],userEmail:['', Validators.required], userPassword: ['', Validators.required],phoneNumber: ['', Validators.required]});
+    this.RegisterForm = this.formBuilder2.group({Firstname: ['', Validators.required],Lastname: ['', Validators.required],userEmail:['', Validators.required], userPassword: ['', Validators.required],phoneNumber: ['']});
 
     this.usercreds = {email: "",firstName:"",lastName:"",password: "",phoneNumber:""}
 
