@@ -1,0 +1,52 @@
+<!--
+  Generated template for the DriverRegisterPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>driverRegister</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <form [formGroup]="driver-register">
+  
+      <ion-item class="item1">
+        <ion-label>License Number:</ion-label>
+        <ion-input type="text" formControlName="LicenseNumber" placeholder  [(ngModel)]="Info.licence_number"></ion-input>
+      </ion-item>
+
+      <ion-item class="item1">
+        <ion-label>Car Brand:</ion-label>
+        <ion-input type="text" formControlName="CarBrand" placeholder  [(ngModel)]="Info.reg_cars.car_brand"></ion-input>
+      </ion-item>
+
+      <ion-item class="item1">
+        <ion-label>Car Color:</ion-label>
+        <ion-input type="text" formControlName="CarColor" [(ngModel)]="Info.reg_cars.car_color"></ion-input>
+      </ion-item>
+
+      <ion-item class="item1">
+        <ion-label>Car License Plate:</ion-label>
+        <ion-input type="text" formControlName="LicensePlate" [(ngModel)]="Info.reg_cars.licence_plate"></ion-input>
+      </ion-item>
+
+      <ion-item class="item1">
+        <ion-label>Address:</ion-label>
+        <ion-input type="text" formControlName="Address" [(ngModel)]="Info.address"></ion-input>
+      </ion-item>
+
+      <!--<ion-item  class="item1">
+        <ion-label>I had my license for more than a year:</ion-label>
+        <ion-checkbox formControlName="Ayear" [(ngModel)]="aYear"></ion-checkbox>
+      </ion-item>-->
+
+
+      <button class="button button-block button-positive createBtn" type="submit" (click)="driver_reg()">Become a driver</button>
+    </form>
+</ion-content>

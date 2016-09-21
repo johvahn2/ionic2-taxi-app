@@ -1,0 +1,49 @@
+.register {
+    .home-page {
+        .item1 {
+    position: relative;
+    padding-left: 16px;
+    border-radius: 0;
+    padding-bottom: 0%;
+    font-size: 1.6rem;
+    border-bottom: 1px solid grey;
+    color: #000;
+    background: rgba(255, 255, 255, -0.41);
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+
+    }
+
+    #circle {
+    width: 100px;
+    height: 100px;
+    background: white;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    font-size: 4rem;
+    text-align: center;
+    padding:0;// 2.3rem;
+    border: 1px solid #ababab;
+    color: grey;
+
+    #proimg{
+    width: 98px;
+    height: 98px;
+    border-radius: 50px;
+
+        }
+    }
+
+
+    .profile-picture {
+    position: absolute;
+    font-size: 2rem;
+    margin-left: 6rem;
+    margin-top: 1.5rem;
+    color: grey;
+    }
+
+    
+    }
+}

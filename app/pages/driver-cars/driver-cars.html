@@ -1,0 +1,27 @@
+<ion-header>
+ <ion-navbar primary>
+  <ion-title>
+    Select Your Car
+  </ion-title>
+  <ion-buttons end>
+    <button (click)="addCar()"><ion-icon name="add"></ion-icon></button>
+  </ion-buttons>
+ </ion-navbar>
+</ion-header>
+
+
+<ion-content class="i-driver-car">
+
+<ion-card class="carCard" *ngFor="let car of cars" (click)="selectCar(car)">
+
+  <ion-card-header>
+    {{car.car_brand}}
+  </ion-card-header>
+
+  <ion-card-content>
+    Lience Plate: {{car.licence_plate}}
+  </ion-card-content>
+
+</ion-card>
+
+</ion-content>
