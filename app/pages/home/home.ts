@@ -46,6 +46,7 @@ isTransitioning(){
     this.navCtrl.setRoot(LandPage);
 
     }
+  
   }
 
   LogOut(){

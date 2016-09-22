@@ -18,14 +18,14 @@ export class RegisterPage {
 
 
   RegisterForm: any;
+  Info:any;
   usercreds:any;
 
   constructor(public navCtrl: NavController,public utils:Utils,public auth: Auth,public auther:Auther ,public user: User,private formBuilder2: FormBuilder) {
-   
-    this.RegisterForm = this.formBuilder2.group({Firstname: ['', Validators.required],Lastname: ['', Validators.required],userEmail:['', Validators.required], userPassword: ['', Validators.required],phoneNumber: ['']});
+          this.RegisterForm = this.formBuilder2.group({Firstname: ['', Validators.required],Lastname: ['', Validators.required],userEmail:['', Validators.required],userPassword: ['', Validators.required],phoneNumber: ['', Validators.required],});
 
-    this.usercreds = {email: "",firstName:"",lastName:"",password: "",phoneNumber:""}
-
+          this.usercreds = {email: "",firstName:"",lastName:"",password: "",phoneNumber:"",picUrl:'pick.com'}
+  
   }
   
 

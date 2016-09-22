@@ -14,35 +14,35 @@
 
 
 <ion-content class="register">
-          <form [formGroup]="RegisterForm">
-            <div id="circle" (click)="addImage()"><img id="proimg" *ngIf="base64Image" [src]="base64Image"><span class="profile-picture">Profile Picture <h6 class="small">(optional)</h6></span></div>
-            <!--<div id="circle" (click)="addImage()"><img  *ngIf="base64Image" [src]="base64Image"><span class="profile-picture">Profile Picture <h6 class="small">(optional)</h6></span></div>-->
-            <ion-item class="item1">
-              <ion-label>First Name</ion-label>
-              <ion-input type="text" formControlName="Firstname" placeholder  [(ngModel)]="usercreds.firstName"></ion-input>
-            </ion-item>
+      <form [formGroup]="RegisterForm">
+        <div id="circle">+<span class="profile-picture">Profile Picture <h6 class="small">(optional)</h6></span></div>
+        <ion-item class="item1">
+          <ion-label>First Name</ion-label>
+          <ion-input type="text" formControlName="Firstname" placeholder  [(ngModel)]="usercreds.firstName"></ion-input>
+        </ion-item>
 
-            <ion-item class="item1">
-              <ion-label>Last Name</ion-label>
-              <ion-input type="text" formControlName="Lastname" placeholder  [(ngModel)]="usercreds.lastName"></ion-input>
-            </ion-item>
+        <ion-item class="item1">
+          <ion-label>Last Name</ion-label>
+          <ion-input type="text" formControlName="Lastname" placeholder  [(ngModel)]="usercreds.lastName"></ion-input>
+        </ion-item>
 
-            <ion-item class="item1">
-              <ion-label>Email</ion-label>
-              <ion-input type="text" formControlName="userEmail" [(ngModel)]="usercreds.email"></ion-input>
-            </ion-item>
+        <ion-item class="item1">
+          <ion-label>Email</ion-label>
+          <ion-input type="text" formControlName="userEmail" [(ngModel)]="usercreds.email"></ion-input>
+        </ion-item>
 
-            <ion-item class="item1">
-              <ion-label>Phone Number</ion-label>
-              <ion-input type="number" formControlName="phoneNumber" [(ngModel)]="usercreds.phoneNumber"></ion-input>
-            </ion-item>
+        <ion-item class="item1">
+          <ion-label>Phone Number</ion-label>
+          <ion-input type="text" formControlName="phoneNumber" [(ngModel)]="usercreds.phoneNumber"></ion-input>
+        </ion-item>
 
-            <ion-item class="item1">
-              <ion-label>Password</ion-label>
-              <ion-input type="password" formControlName="userPassword" [(ngModel)]="usercreds.password"></ion-input>
-            </ion-item>
-            <button class="button button-block button-positive createBtn" type="submit" (click)="SignUp()">Create Account</button>
-          </form>
+        <ion-item class="item1">
+          <ion-label>Password</ion-label>
+          <ion-input type="password" formControlName="userPassword" [(ngModel)]="usercreds.password"></ion-input>
+        </ion-item>
+        <button class="button button-block button-positive createBtn" type="submit" (click)="SignUp()">Create Account</button>
+      </form>
+
           <div class="row">
             <span class="span1">Have an account?
               <span class="span1" primary (click)="Login()">Login</span>
