@@ -211,12 +211,22 @@ export class MapPage implements OnInit {
       Lng: this.current_lng
     }
 
+    // let info={
+    //   current_location: current_LatLng,
+    //   destanation_place: this.destanation_pick,
+    //   note: this.bookingNote.note,
+    //   people: this.amountofPeople,
+    //   name: this.user.details.name,
+    //   price: '245GD'
+      
+    // }
+
     let info={
       current_location: current_LatLng,
       destanation_place: this.destanation_pick,
       note: this.bookingNote.note,
       people: this.amountofPeople,
-      name: this.user.details.name,
+      name: "Frank Brown",
       price: '245GD'
       
     }

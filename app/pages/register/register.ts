@@ -58,6 +58,7 @@ export class RegisterPage {
   me.auth.login('custom', loginInfo, loginOptions).then(() => {
                 me.user.details.name = me.usercreds.firstName+' '+me.usercreds.lastName;
                 me.user.details.image = 'https://pbs.twimg.com/profile_images/617058765167329280/9BkeDJlV.png';
+                me.user.set('email', me.usercreds.email);
                 me.user.set('isDriver', false);
                 me.user.set('Rating', '0');
                 me.user.save().then(()=>{

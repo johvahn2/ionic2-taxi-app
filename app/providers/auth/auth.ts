@@ -11,13 +11,13 @@ export class Auther {
   constructor(private http: Http) {}
 
 /*--------------HTTP----------------------------*/
-public MAIN_URL: string = "https://taxigrid.herokuapp.com";
+public MAIN_URL: string = "https://hidden-headland-59855.herokuapp.com";
 
 public contentHeader: Headers = new Headers({"Content-Type": "application/json"});
 
-public SIGNUP_URL: string = "https://taxigrid.herokuapp.com/signup";
+public SIGNUP_URL: string = this.MAIN_URL+"/signup";
 
-DRIVER_SIGNUP_URL: string = "https://taxigrid.herokuapp.com/driver/register";
+DRIVER_SIGNUP_URL: string = this.MAIN_URL+"/driver/register";
 
 
 

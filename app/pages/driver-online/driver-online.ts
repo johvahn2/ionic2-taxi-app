@@ -28,9 +28,10 @@ export class DriverOnlinePage {
     map:any;
   constructor(private navCtrl: NavController,private navParam:NavParams,public user: User,private platform: Platform,public auther: Auther) {
     this.socket = io(this.auther.SOCKET_CONNECT);
+   // this.socket = io.connect('http://localhost:3001');
 
-    let carDetail = this.navParam.get('CarDetials');
-
+    let carDetail = this.user.get('CarDetials',null);// this.navParam.get('carData');
+    console.log(carDetail);
     platform.ready().then(() => {
 
       //getting current coords
@@ -38,7 +39,7 @@ export class DriverOnlinePage {
            this.current_lat =resp.coords.latitude; this.current_lng =resp.coords.longitude;
 
             this.currrent_location =new GoogleMapsLatLng(resp.coords.latitude,resp.coords.longitude);
-           });
+          
 
           this.driverDetails={
             lat: this.current_lat,
@@ -47,7 +48,7 @@ export class DriverOnlinePage {
             carBrand: carDetail.CarBrand,
             carColor: carDetail.CarColor,
             Lplate: carDetail.CarPlate,
-            rating: '0'
+            rating: this.user.get('Rating',0)
 
           }
 
@@ -57,6 +58,7 @@ export class DriverOnlinePage {
       this.initializeMap();
 
       console.log(this.driverDetails);
+      });
     });
   }
 
@@ -70,7 +72,7 @@ export class DriverOnlinePage {
   }
 
   initializeMap() {
-    this.map = new GoogleMap('mapDriver', {
+    this.map = new GoogleMap('map', {
       'backgroundColor': 'white',
       'controls': {
         'compass': true,

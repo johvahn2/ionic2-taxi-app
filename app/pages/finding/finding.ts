@@ -24,6 +24,7 @@ estimateTime:any;
   constructor(private navCtrl: NavController, public auther:Auther,private navParam: NavParams) {
       
       this.socket = io.connect(this.auther.SOCKET_CONNECT);
+      //this.socket = io.connect('http://localhost:3001');
       this.info = this.navParam.get('data');
 
       this.Status = 'Finding Driver...';
